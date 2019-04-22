@@ -32,20 +32,24 @@ def main():
             if event.type == QUIT:
                 gc.GAME_STATE = "Terminated"
 
+            row_length = dc.WINDOW_WIDTH / dc.TILE_LENGTH
+
             if (event.type == KEYDOWN and
                     event.key in (K_LEFT, K_UP, K_RIGHT, K_DOWN)):
 
                 if event.key == K_LEFT:
-                    character.move(-1)
+                    if character.position % row_length != 0: 
+                        character.move(-1)
 
                 elif event.key == K_UP:
-                    character.move(int(- dc.WINDOW_WIDTH / dc.TILE_LENGTH))
+                    character.move(int(- row_length))
 
                 elif event.key == K_RIGHT:
-                    character.move(1)
+                    if character.position % row_length != row_length -1:
+                        character.move(1)
 
                 elif event.key == K_DOWN:
-                    character.move(int(dc.WINDOW_WIDTH / dc.TILE_LENGTH))
+                    character.move(int(row_length))
 
                 character.touch_square()
                 dc.refresh_display()
