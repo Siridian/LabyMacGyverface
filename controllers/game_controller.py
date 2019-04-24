@@ -14,9 +14,7 @@ class GameController:
     '''Handles the labyrinth grid creation using dedicated json file
     Created grid is stored as an array of squares used for navigation
     Also contains useful variable to check game state'''
-
-    RUNNING = True
-    GAME_OVER = False
+    
     GAME_STATE = "Running"
     START_SQUARE_ID = 0
     SQUARE_SET = []

@@ -1,6 +1,6 @@
 === LABYMACGYVERFACE ===
 
-Project version : 2.0 (19/04/2019)
+Project version : 2.1 (24/04/2019)
 
 Endless hours of pythonic fun brought to you by V.S. Studios !
 
